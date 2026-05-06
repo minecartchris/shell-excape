@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="./css/style.css">
+        <title>shell excape</title>
+    </head>
+    <body>
+        <header>
+            <h1>Room 2</h1>
+        </header>
+
+        <main>
+            <div class="simon-grid">
+                <button onclick="simonClick(1)" id="1" class="simonButtion"></button>
+                <button onclick="simonClick(2)" id="2" class="simonButtion"></button>
+                <button onclick="simonClick(3)" id="3" class="simonButtion"></button>
+                <button onclick="simonClick(4)" id="4" class="simonButtion"></button>
+                <button onclick="simonClick(5)" id="5" class="simonButtion"></button>
+                <button onclick="simonClick(6)" id="6" class="simonButtion"></button>
+                <button onclick="simonClick(7)" id="7" class="simonButtion"></button>
+                <button onclick="simonClick(8)" id="8" class="simonButtion"></button>
+                <button onclick="simonClick(9)" id="9" class="simonButtion"></button>
+            </div>
+            <input type="text" id="decoded" placeholder="enter your decoded string here" hidden="true">
+            <input type="button" onclick="submit(2)" value="Submit decoded string" hidden="true" id="submitStr">
+
+            <button onclick="nextRoom(2)" id="nextRoom" hidden="true">Next room</button>
+
+        </main>
+        <script src="./js/script.js"></script>
+    </body>
+</html>

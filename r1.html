@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="./css/style.css">
+        <title>shell excape</title>
+    </head>
+    <body>
+        <header>
+            <h1>Room 1</h1>
+        </header>
+
+        <main>
+            <p id="cizerOutPut"></p>
+            
+            <p id="currentInput"></p>
+            <br>
+            <div class="number-grid">
+                <button onclick="numberClick(1)">1</button>
+                <button onclick="numberClick(2)">2</button>
+                <button onclick="numberClick(3)">3</button>
+                <button onclick="numberClick(4)">4</button>
+                <button onclick="numberClick(5)">5</button>
+                <button onclick="numberClick(6)">6</button>
+                <button onclick="numberClick(7)">7</button>
+                <button onclick="numberClick(8)">8</button>
+                <button onclick="numberClick(9)">9</button>
+                <button onclick="numberClick(0)">0</button>
+                <button onclick="removeLastNumber()"><</button>
+                <button onclick="submit(1)">^</button>
+            </div>
+            <input type="text" id="decoded" placeholder="enter your decoded string here" hidden="true">
+            <input type="button" onclick="submit(2)" value="Submit decoded string" hidden="true" id="submitStr">
+
+            <button onclick="nextRoom(1)" id="nextRoom" hidden="true">Next room</button>
+
+        </main>
+        <script src="./js/script.js"></script>
+    </body>
+</html>

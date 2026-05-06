@@ -1,0 +1,83 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+#startButtion {
+    width: 50%;
+    height: 40px;
+}
+
+#currentInput {
+    width: fit-content;
+    height: auto;
+    margin: auto 10px;
+}
+
+#cizerOutPut {
+    width: fit-content;
+    height: auto;
+    margin: auto 10px;
+}
+
+.number-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: max-content;
+    height: max-content;
+}
+
+.simon-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: max-content;
+    height: max-content;
+    justify-self: center;
+    align-self: center;
+}
+
+.simonButtion {
+    width: 100px;
+    height: 100px;
+}
+
+.connect-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    margin: 0px 0px;
+    width: max-content;
+    justify-self: center;
+    align-self: center;
+}
+
+.connect-tile {
+    width: 30px;
+    height: 30px;
+    background-color: gray;
+    margin: 2px 2px;
+}
+
+.connect-grid-buttion {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    margin: 0px 0px;
+    width: max-content;
+    justify-self: center;
+    align-self: center;
+    justify-content: space-between;
+    align-content: space-around;
+}
+
+.connect-tile-buttion {
+    width: 30px;
+    height: 30px;
+    background-color: gray;
+    margin: 2px 2px;
+    
+}
