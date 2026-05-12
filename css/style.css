@@ -77,7 +77,11 @@ main {
 .connect-tile-buttion {
     width: 30px;
     height: 30px;
-    background-color: gray;
+    background-color: rgb(194, 71, 4);
     margin: 2px 2px;
     
+}
+
+.connect-tile-buttion:hover {
+    background-color: greenyellow;
 }

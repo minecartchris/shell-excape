@@ -214,6 +214,10 @@ function checkWin() {
 /* 
 Chess Stuff
 It is so much for just 1 room its like all 3 rooms in one room
+i might explode if i don't fix this (5/12/26)
+i also might just hate chess and the open source librays omg (5/12/26)
+i spend 2-3 class days JUST on chess (5/12/26)
+and i still have no board (5/12/26)
 */
 if (window.location.href === "http://localhost:5500/r4.html") {
     //import { Chess } from 'chess.js'
