@@ -2,6 +2,8 @@ function startGame() {
     window.location = `http://localhost:5500/r1.html`
 }
 
+import { Chess } from 'https://unpkg.com/chess.js@1.4.0/dist/cjs/chess.js'
+
 let passwordCorrect = [1,2,3,4]
 let enteredpassword = []
 
@@ -254,17 +256,17 @@ if (window.location.href === "http://localhost:5500/r4.html") {
     }
 
     function onDrop (source, target) {
-    removeGreySquares()
+        removeGreySquares()
 
-    // see if the move is legal
-    var move = game.move({
-        from: source,
-        to: target,
-        promotion: 'q' // NOTE: always promote to a queen for example simplicity
-    })
+        // see if the move is legal
+        var move = game.move({
+            from: source,
+            to: target,
+            promotion: 'q' // NOTE: always promote to a queen for example simplicity
+        })
 
-    // illegal move
-    if (move === null) return 'snapback'
+        // illegal move
+        if (move === null) return 'snapback'
     }
 
     function onMouseoverSquare (square, piece) {
@@ -287,21 +289,21 @@ if (window.location.href === "http://localhost:5500/r4.html") {
     }
 
     function onMouseoutSquare (square, piece) {
-    removeGreySquares()
+        removeGreySquares()
     }
 
     function onSnapEnd () {
-    board.position(game.fen())
+        board.position(game.fen())
     }
 
     var config = {
-    draggable: true,
-    position: 'start',
-    onDragStart: onDragStart,
-    onDrop: onDrop,
-    onMouseoutSquare: onMouseoutSquare,
-    onMouseoverSquare: onMouseoverSquare,
-    onSnapEnd: onSnapEnd
+        draggable: true,
+        position: 'start',
+        onDragStart: onDragStart,
+        onDrop: onDrop,
+        onMouseoutSquare: onMouseoutSquare,
+        onMouseoverSquare: onMouseoverSquare,
+        onSnapEnd: onSnapEnd
     }
     board = Chessboard('myBoard', config)
 
