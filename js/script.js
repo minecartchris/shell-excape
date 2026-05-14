@@ -2,7 +2,7 @@ function startGame() {
     window.location = `http://localhost:5500/r1.html`
 }
 
-import { Chess } from 'https://unpkg.com/chess.js@1.4.0/dist/cjs/chess.js'
+//import { Chess } from 'https://unpkg.com/chess.js@1.4.0/dist/cjs/chess.js'
 
 let passwordCorrect = [1,2,3,4]
 let enteredpassword = []
@@ -220,7 +220,7 @@ i might explode if i don't fix this (5/12/26)
 i also might just hate chess and the open source librays omg (5/12/26)
 i spend 2-3 class days JUST on chess (5/12/26)
 and i still have no board (5/12/26)
-*/
+
 if (window.location.href === "http://localhost:5500/r4.html") {
     //import { Chess } from 'chess.js'
 
@@ -309,7 +309,7 @@ if (window.location.href === "http://localhost:5500/r4.html") {
 
 
 }
-/*
+
 function minimax(board, depth, alpha, beta, isMaximizing) {
     const validMoves = getValidMoves(board);
     const terminal = checkWin(board); // Check for win/draw

@@ -1,0 +1,48 @@
+body {
+    
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+}
+
+.rainbow-back {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    /*color: transparent; */
+    /* Set a larger background size to allow movement */
+    background-size: 400% 100%;
+    /* Apply the animation */
+    animation: move-gradient 20s linear infinite;
+    /* Optional: Add basic styling for visibility */
+    font-weight: bold;
+}
+
+@keyframes move-gradient {
+    to { background-position: 200% center; }
+}
+
+header {
+    background-color: transparent;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 48pt;
+}
+
+p {
+    font-size: 36pt;
+    color: black;
+}
+
+a {
+    font-size: 36pt;
+}

@@ -2,12 +2,39 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    align-items: center;
+}
+
+body {
+    background-color: bisque;
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+}
+
+h1 {
+    font-size: 36pt;
+}
+
+p {
+    font-size: 24pt;
+}
+
+a {
+    font-size: 24pt;
 }
 
 #startButtion {
     width: 50%;
     height: 40px;
+    background-color: darkolivegreen;
+    border: 25px black;
+    border-radius: 15px;
+}
+
+#startButtion:hover {
+    background-color: olive;
 }
 
 #currentInput {
@@ -16,10 +43,36 @@ main {
     margin: auto 10px;
 }
 
+#decoded {
+    background-color: blue;
+    color: wheat;
+    width: 50%;
+}
+
+button {
+    background-color: gold;
+    width: 75px;
+    height: 75px;
+    border: 25px black;
+    border-radius: 15px;
+}
+
+button:hover {
+    background-color: goldenrod;
+}
+
 #cizerOutPut {
     width: fit-content;
     height: auto;
     margin: auto 10px;
+}
+
+#submitStr {
+    background-color: gold;
+    width: max-content;
+    height: 75px;
+    border: 25px black;
+    border-radius: 15px;
 }
 
 .number-grid {
@@ -77,11 +130,34 @@ main {
 .connect-tile-buttion {
     width: 30px;
     height: 30px;
-    background-color: rgb(194, 71, 4);
+    background-color: rgb(255, 255, 0);
     margin: 2px 2px;
     
 }
 
 .connect-tile-buttion:hover {
-    background-color: greenyellow;
+    background-color: red;
+}
+
+.rainbow-text {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* Set a larger background size to allow movement */
+    background-size: 400% 100%;
+    /* Apply the animation */
+    animation: move-gradient 10s linear infinite;
+    /* Optional: Add basic styling for visibility */
+    font-weight: bold;
+}
+
+@keyframes move-gradient {
+    to { background-position: 200% center; }
+}
+
+header {
+    background-color: black; /* Yellow */
+    padding: 0 4px;
+    border-radius: 2px;
 }
