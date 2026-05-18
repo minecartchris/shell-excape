@@ -157,7 +157,11 @@ button:hover {
 }
 
 header {
+    display: flex;
+    justify-content: center;
     background-color: black; /* Yellow */
+    width: max-content;
+    height: min-content;
     padding: 0 4px;
     border-radius: 2px;
 }
