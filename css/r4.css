@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-content: center;
 }
-
+/*Google AI*/
 .rainbow-back {
     background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
     -webkit-background-clip: text;
@@ -22,7 +22,7 @@ body {
 @keyframes move-gradient {
     to { background-position: 200% center; }
 }
-
+/*Google AI*/
 header {
     background-color: transparent;
 }

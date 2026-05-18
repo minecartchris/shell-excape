@@ -2,7 +2,7 @@ function startGame() {
     window.location = `http://localhost:5500/r1.html`
 }
 
-//import { Chess } from 'https://unpkg.com/chess.js@1.4.0/dist/cjs/chess.js'
+//import { Chess } from 'https://unpkg.com/chess.js@1.4.0/dist/cjs/chess.js' no chess items are used ignore 
 
 let passwordCorrect = [1,2,3,4]
 let enteredpassword = []
@@ -158,7 +158,7 @@ function addRow(row) {
 
         let calulatethings = connect4RowHeights[row]+1
         connect4RowHeights[row] = calulatethings
-        //minimax(connect4Grid, 5, 0, 0, true)
+        //minimax(connect4Grid, 5, 0, 0, true) not used
         
         botMove = Math.floor(Math.random() * 8)
         if (botMove === 0) {
@@ -197,7 +197,7 @@ function addRow(row) {
         }
     }
 }
-
+// checkWin is a fuction copyed from google AI
 function checkWin() {
     const chk = (a, b, c, d) => a !== 0 && a === b && a === c && a === d;
     var board = connect4Grid
@@ -212,7 +212,7 @@ function checkWin() {
     }
     return 0; // No winner
 }
-
+// code below this line is commented out and not in use and depracated yes it will ALL stay
 /* 
 Chess Stuff
 It is so much for just 1 room its like all 3 rooms in one room
@@ -422,7 +422,7 @@ function addRow(row, isPlayer) {
         }
     }
 }
-*/
+
 function room3Setup() {
     //later when things work maybe idk 
     
@@ -432,7 +432,7 @@ function room3Setup() {
     //}
 }
 
-/* 
+
 function testThingsMAybe() {
     
     for (let index = 1; index < 43; index++) {
