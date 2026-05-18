@@ -12,7 +12,7 @@ let simonSequenceEnterd = []
 let simonClicks = 0
 let simonClicks2 = 0
 
-let connect4Grid = [[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],]
+let connect4Grid = [[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0]]
 let connect4RowHeights = [1,1,1,1,1,1,1,1]
 let roy = "red"
 let winq = null
