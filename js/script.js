@@ -14,8 +14,8 @@ let simonClicks2 = 0
 
 let connect4Grid = [[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0]]
 let connect4RowHeights = [1,1,1,1,1,1,1,1]
-let roy = "red"
-let winq = null
+let redOrYellow = "red"
+let winQueston = null
 let hasWon = false
 
 for (let index = 0; index < 42; index++) {
@@ -134,16 +134,16 @@ function simonLoop() {
 
 function addRow(row) {
     console.log("Clicked")
-    if (!(hasWon) && roy === "red") {
+    if (!(hasWon) && redOrYellow === "red") {
         console.log("check ran")
-        document.getElementById(`${row}-${connect4RowHeights[row]}`).style.backgroundColor = roy;
+        document.getElementById(`${row}-${connect4RowHeights[row]}`).style.backgroundColor = redOrYellow;
         
-        if (roy === "red") {
-            roy = "yellow"
+        if (redOrYellow === "red") {
+            redOrYellow = "yellow"
         } else {
-            roy = "red"
+            redOrYellow = "red"
         }
-        console.log(roy)
+        console.log(redOrYellow)
 
         for (let index = 1; index < 8; index++) {
             for (let index2 = 1; index2 < 7; index2++) {
@@ -166,7 +166,7 @@ function addRow(row) {
         }
         console.log(botMove)
 
-        document.getElementById(`${botMove}-${connect4RowHeights[botMove]}`).style.backgroundColor = roy;
+        document.getElementById(`${botMove}-${connect4RowHeights[botMove]}`).style.backgroundColor = redOrYellow;
 
         for (let index = 1; index < 8; index++) {
             for (let index2 = 1; index2 < 7; index2++) {
@@ -176,24 +176,24 @@ function addRow(row) {
             
         }
 
-        let winq = checkWin()
+        let winQueston = checkWin()
 
         calulatethings = connect4RowHeights[botMove]+1
         connect4RowHeights[botMove] = calulatethings
-        console.log(winq)
-        if (winq === "red") {
+        console.log(winQueston)
+        if (winQueston === "red") {
             alert(`red Has won`)
             hasWon = true
             nextRoom(3)
-        } else if (winq === "yellow") {
+        } else if (winQueston === "yellow") {
             alert(`yellow Has won`)
             hasWon = true
         }
 
-        if (roy === "red") {
-            roy = "yellow"
+        if (redOrYellow === "red") {
+            redOrYellow = "yellow"
         } else {
-            roy = "red"
+            redOrYellow = "red"
         }
     }
 }
