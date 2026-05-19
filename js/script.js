@@ -1,4 +1,5 @@
 function startGame() {
+    localStorage.setItem("startTime", Date.now())
     window.location = `http://localhost:5500/r1.html`
 }
 
@@ -17,6 +18,8 @@ let connect4RowHeights = [1,1,1,1,1,1,1,1]
 let redOrYellow = "red"
 let winQueston = null
 let hasWon = false
+let clicksLeft = 0
+let pressed = false
 
 for (let index = 0; index < 42; index++) {
     connect4Grid.push(0)
@@ -96,8 +99,14 @@ if (window.location.href === "http://localhost:5500/r2.html") {
 }
 
 if (window.location.href === "http://localhost:5500/r3.html") {
-    //testThingsMAybe()
-    room3Setup()
+    
+}
+
+if (window.location.href === "http://localhost:5500/r4.html") {
+    
+    let startTime = localStorage.getItem("startTime")
+    let timeTaken = Date.now() - startTime
+    clicksLeft = Math.floor(timeTaken/1000)
 }
 
 function simonLoop() {
@@ -212,6 +221,35 @@ function checkWin() {
     }
     return 0; // No winner
 }
+
+function jumpUp(dir) {
+    if (dir === "down" && ! pressed) {
+        clicksLeft--;
+        pressed = true
+    } else if (dir === "up" && pressed) {
+        pressed = false
+    }
+}
+
+document.addEventListener('keydown', function(event) {
+    console.log(event.key);
+    
+    if (event.key === " ") {
+        jumpUp("down")
+    }
+    document.getElementById("yes").textContent = `YOU WIN IN ${clicksLeft} clicks`
+    if (clicksLeft <= 0) {
+        document.getElementById("winText").hidden = false
+    }
+    
+});
+
+document.addEventListener('keyup', function(event) {
+    if (event.key === " ") {
+        jumpUp("up")
+    }
+})
+
 // code below this line is commented out and not in use and depracated yes it will ALL stay
 /* 
 Chess Stuff
