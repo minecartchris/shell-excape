@@ -20,6 +20,8 @@ let winQueston = null
 let hasWon = false
 let clicksLeft = 0
 let pressed = false
+let oldTimeStamp = 0
+let secondsPassed = 0
 
 for (let index = 0; index < 42; index++) {
     connect4Grid.push(0)
@@ -106,7 +108,9 @@ if (window.location.href === "http://localhost:5500/r4.html") {
     
     let startTime = localStorage.getItem("startTime")
     let timeTaken = Date.now() - startTime
+    
     clicksLeft = Math.floor(timeTaken/1000)
+    window.requestAnimationFrame(gameLoop)
 }
 
 function simonLoop() {
@@ -250,7 +254,23 @@ document.addEventListener('keyup', function(event) {
     }
 })
 
-// code below this line is commented out and not in use and depracated yes it will ALL stay
+function gameLoop(timeStamp) {
+    // Calculate how much time has passed
+    secondsPassed = (timeStamp - oldTimeStamp) / 1000;
+    oldTimeStamp = timeStamp;
+    
+    clicksLeft = Math.floor(clicksLeft - secondsPassed)
+
+    document.getElementById("yes").textContent = `YOU WIN IN ${clicksLeft} clicks`
+
+    if (clicksLeft <= 0) {
+        document.getElementById("winText").hidden = false
+    }
+    
+    window.requestAnimationFrame(gameLoop)
+}
+
+//code below this line is commented out and not in use and depracated yes it will ALL stay
 /* 
 Chess Stuff
 It is so much for just 1 room its like all 3 rooms in one room
