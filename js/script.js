@@ -101,7 +101,7 @@ if (window.location.href === "http://localhost:5500/r2.html") {
 }
 
 if (window.location.href === "http://localhost:5500/r3.html") {
-    
+    //this should have done somthing na it still wount
 }
 
 if (window.location.href === "http://localhost:5500/r4.html") {
