@@ -228,7 +228,7 @@ function checkWin() {
 
 function jumpUp(dir) {
     if (dir === "down" && ! pressed) {
-        clicksLeft--;
+        clicksLeft = clicksLeft-10;
         pressed = true
     } else if (dir === "up" && pressed) {
         pressed = false
@@ -257,14 +257,15 @@ document.addEventListener('keyup', function(event) {
 function gameLoop(timeStamp) {
     // Calculate how much time has passed
     secondsPassed = (timeStamp - oldTimeStamp) / 1000;
-    oldTimeStamp = timeStamp;
-    
-    clicksLeft = Math.floor(clicksLeft - secondsPassed)
-
+    if ((timeStamp - oldTimeStamp)>1000) {
+        oldTimeStamp = timeStamp;
+        clicksLeft = Math.floor(clicksLeft - 1)
+    }
     document.getElementById("yes").textContent = `YOU WIN IN ${clicksLeft} clicks`
 
     if (clicksLeft <= 0) {
         document.getElementById("winText").hidden = false
+        clicksLeft = 0
     }
     
     window.requestAnimationFrame(gameLoop)
