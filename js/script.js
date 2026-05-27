@@ -1,6 +1,6 @@
 function startGame() {
     localStorage.setItem("startTime", Date.now())
-    window.location = `http://localhost:5500/r1.html`
+    window.location = `http://localhost:5500/backround.html`
 }
 
 //import { Chess } from 'https://unpkg.com/chess.js@1.4.0/dist/cjs/chess.js' no chess items are used ignore 
