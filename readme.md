@@ -1,6 +1,7 @@
 # This is a project
-## i am well awere of the existing bugs
-## no they will 100% not get fixed
+## Bugs
+i am well awere of the existing bugs  
+no they will 100% not get fixed  
 # Rooms
 room 1 is a simple password then ceizer chifer  
 room 2 is just amung us simon says  
